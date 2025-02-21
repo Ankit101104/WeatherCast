@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo-container">
+            <i class="fas fa-cloud-sun logo-icon"></i>
+            <span class="logo-text">WeatherCast</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="weather-app">
+        <h1>Weather App</h1>
+        <div class="search-section">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="city" placeholder="Enter the city name" />
+            </div>
+            <button id="getweather"><i class="fas fa-cloud-sun"></i> Get Weather</button>
+            <button id="toggleUnits"><i class="fas fa-temperature-high"></i> Switch to F</button>
+        </div>
+        
+        <div id="weatherdata" class="hidden">
+            <div class="current-weather">
+                <h2><i class="fas fa-map-marker-alt"></i> Current Weather</h2>
+                <div class="weather-info">
+                    <i class="fas fa-temperature-high temp-icon"></i>
+                    <p id="temperature"></p>
+                </div>
+                <div class="weather-info">
+                    <i class="fas fa-cloud weather-desc-icon"></i>
+                    <p id="description"></p>
+                </div>
+            </div>
+            
+            <div class="forecast-container">
+                <h2><i class="fas fa-calendar-alt"></i> 5-Day Forecast</h2>
+                <div id="forecast" class="forecast-grid"></div>
+            </div>
+        </div>
+        
+        <p id="errormessage" class="hidden"></p>
+        <div class="loading-animation" id="loading"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>Created with <i class="fas fa-heart"></i> by Ankit Singh</p>
+            <div class="social-links">
+                <a href="https://github.com/Ankit101104" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/ankit101104" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
